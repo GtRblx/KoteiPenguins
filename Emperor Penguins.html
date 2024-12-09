@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Information</title>
+    <style>
+       
+       * {
+           cursor: url(https://cur.cursors-4u.net/food/foo-7/foo613.cur), url(https://www.cursors-4u.com/cursor/2012/01/18/ebi-shrimp-sushi.html), auto !important;
+       }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://i.pinimg.com/736x/51/3d/b8/513db85a5e9b16c886c9511f297d57a1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px;
+        background-image: url('https://i.pinimg.com/736x/55/49/12/55491240190bc00582de1496e5564220.jpg');
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .box {
+        margin: 20px 0;
+        padding: 20px;
+        background-image: url("https://img.freepik.com/premium-photo/minimalist-penguin-hd-desktop-wallpaper-with-panoramic-scale_899449-438220.jpg?semt=ais_hybrid");
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: repeat;
+        border: 4px solid black;
+        border-radius: 10px;
+        text-align: left;
+        transition: transform 0.5s ease;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+    }
+
+    .box2 {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: antiquewhite; 
+        border: 4px solid black;
+        border-radius: 10px;
+        text-align: left;
+        transition: transform 0.5s ease;
+    }
+
+    .box2:hover {
+        transform: scale(1.05);
+    }
+
+    .hidden {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: height 0.5s ease, opacity 0.5s ease;
+    }
+
+    .visible {
+        height: auto;
+        opacity: 1;
+        transition: height 0.5s ease, opacity 0.5s ease;
+    }
+
+    .arrow {
+        display: inline-block;
+        transition: transform 0.5s ease;
+    }
+
+    .arrow.open {
+        transform: rotate(180deg);
+    }
+
+    #penguinLink {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+
+    #penguinImage {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    #penguinImage:hover {
+        transform: scale(1.2);
+    }
+
+    h1, h2 {
+        margin: 0;
+        text-align: center;
+        color: darkblue;
+    }
+
+    h2 {
+        color: darkblue;
+    }
+
+    .facebook-icon {
+    width: 15px; 
+    height: 15px; 
+    vertical-align: middle; 
+    margin-left: 5px; 
+    }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .box, .box2 {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #penguinImage {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    }
+
+@media (max-width: 480px) {
+    .box, .box2 {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #penguinImage {
+        width: 35px;
+        height: 35px;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+}
+
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Penguin Information</h1>
+        <center><img src="https://graphic.neocities.org/7a3447ad-4bfb-405c-ac7b-a7d88d1bfa28.gif"/></center>
+
+        <!-- Introduction Section -->
+        <div id="ButtonOne" class="box">
+            <h2>
+                Introduction
+                <span class="toggle" onclick="toggleSection('toggleIntro', 'arrowIntro')">
+                    <span id="arrowIntro" class="arrow">▼</span>
+                </span>
+            </h2>
+            <hr>
+            <div id="toggleIntro" class="hidden">
+                <div id="toggleIntro" class="box2">
+                    <p><b><center>Our chosen topic is the IT Professionals. In this website we have listed down the careers, responsibilities, 
+                    and core skills that an IT professionals
+                    </b></center></p>
+                    <p><center><b>Authors</b></center></p>
+                    <p><center><b>Bien Emmanuelle S. Ong</b>
+                        <a href="https://www.facebook.com/bienemmanuelle.ong.52" target="_blank">
+                            <img class="facebook-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        </a>
+                    </center></p>
+                    <p><center><b>Isamu R. Mizukoshi</b>
+                        <a href="https://www.facebook.com/isamu.mizukoshi.7" target="_blank">
+                            <img class="facebook-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        </a>
+                    </center></p>
+                    <p><center><b>Paolo Stephen A. Baldo</b>
+                        <a href="https://www.facebook.com/paolo.baldo.792" target="_blank">
+                            <img class="facebook-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        </a>
+                    </center></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Careers Section -->
+        <div id="ButtonTwo" class="box">
+            <h2>
+                Careers
+                <span class="toggle" onclick="toggleSection('toggleCareers', 'arrowCareers')">
+                    <span id="arrowCareers" class="arrow">▼</span>
+                </span>
+            </h2>
+            <hr>
+            <div id="toggleCareers" class="hidden">
+                <center><button onclick="window.location.href='Collage.html'">Careers</button></center>
+            </div>
+        </div>
+
+        <!-- Responsibilities Section -->
+        <div id="ButtonThree" class="box">
+            <h2>
+                Responsibilities
+                <span class="toggle" onclick="toggleSection('toggleResponsibilities', 'arrowResponsibilities')">
+                    <span id="arrowResponsibilities" class="arrow">▼ </span>
+                </span>
+            </h2>
+            <hr>
+            <div id="toggleResponsibilities" class="hidden">
+                <p>Below is a short description of multiple responsibilities of being an IT professional.</p>
+                <div id="SubButtonOneRes" class="box2" style="overflow: hidden; padding: 0;">
+                    <p><b>
+                        Troubleshooting
+                        <span class="toggle" onclick="toggleSection('toggleSub1Res', 'arrowSub1Res')">
+                            <span id="arrowSub1Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub1Res" class="hidden">
+                        <ul>
+                            <li><b>Troubleshooting:</b></li>
+                            Identifying an issue, determining its source, and providing quick resolutions is a primary skill for IT technicians.
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="SubButtonTwoRes" class="box2" style="overflow: hidden; padding: 0;">
+                    <p><b></b><p><b>
+                        Network Management
+                        <span class="toggle" onclick="toggleSection('toggleSub2Res', 'arrowSub2Res')">
+                            <span id="arrowSub2Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub2Res" class="hidden">
+                        <ul>
+                            <li><b>Network Management:</b></li>
+                            IT professionals must support frequent repetitive operations of a computer system to ensure networks operate efficiently.
+                        </ul>
+                    </div>
+                </div>
+               
+                <div id="SubButtonThreeRes" class="box2" style="overflow: hidden; padding: 0;">
+                    <p><b></b><p><b>
+                        Cybersecurity
+                        <span class="toggle" onclick="toggleSection('toggleSub3Res', 'arrowSub3Res')">
+                            <span id="arrowSub3Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub3Res" class="hidden">
+                        <ul>
+                            <li><b>Cyber Security:</b></li>
+                            Cyber-attacks cause losses in lost working hours due to prolonged downtime, cancellation of delayed orders, and loss of vital data.
+                        </ul>
+                    </div>
+                </div>
+                <div id="SubButtonFourRes" class="box2" style="overflow: hidden; padding: 0;">
+                   <p><b></b><p><b>
+                        Data Analysis
+                        <span class="toggle" onclick="toggleSection('toggleSub4Res', 'arrowSub4Res')">
+                            <span id="arrowSub4Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub4Res" class="hidden">
+                        <ul>
+                            <li><b>Data Analysis:</b></li>
+                            <!-- Plain English breakdown of data analysis -->
+                            They help set up security processes that prevent unauthorized access, monitor databases to ensure proper functionality, and
+                            maintain systems to ensure they work without malfunctioning. Another vital duty of an IT specialist is to install 
+                            backup systems to restore data in cases of power breakdown, software malfunctions, and virus attacks. 
+                            <br><br>
+                            They also have the knowledge and software needed to organize, analyze, manage, store and interpret data beneficial to business processes.
+                            These processes include financial data information, shipping records, purchase orders, billing systems, payment records, and company expenses.
+                            By availing this information, data experts help organizations to use the information for future use.
+                        </ul>
+                    </div>
+                </div>
+                <div id="SubButtonFiveRes" class="box2" style="overflow: hidden; padding: 0;">
+                  <p><b></b><p><b>
+                        Software Development
+                        <span class="toggle" onclick="toggleSection('toggleSub5Res', 'arrowSub5Res')">
+                            <span id="arrowSub5Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub5Res" class="hidden">
+                        <ul>
+                            <li><b>Software Development:</b></li>
+                            <!-- Plain English breakdown of software development -->
+                            They do the process of designing and implementing a software solution to satisfy a user.
+                            The process is more encompassing than programming, writing code, in that it includes conceiving the goal,
+                            evaluating feasibility, analyzing requirements, design, testing and release
+                        </ul>
+                    </div>
+                </div>
+                <div id="SubButtonSixRes" class="box2" style="overflow: hidden; padding: 0;">
+                   <p><b></b><p><b>
+                        Technical Support
+                        <span class="toggle" onclick="toggleSection('toggleSub6Res', 'arrowSub6Res')">
+                            <span id="arrowSub6Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub6Res" class="hidden">
+                        <ul>
+                            <li><b>Technical Support:</b></li>
+                            <!-- Plain English breakdown of technical support -->
+                            They are the people to install and configure computer systems, diagnose hardware and software faults 
+                            and solve technical and application problems, either over the phone or in person.
+                            <br><br>
+                            They keep computer systems running smoothly and ensure users get the maximum benefit from them, 
+                            install and configure computer hardware operating systems and applications, monitor and maintain computer systems and networks, 
+                            provide support in a face-to-face capacity, over the phone or via remote desktop software, helping staff or clients set up systems or resolve issues
+                            , troubleshoot system and network problems, diagnosing and solving hardware or software faults, replace parts as required
+                            and lastly follow diagrams and written instructions to repair a fault or set up a system
+                        </ul>
+                    </div>
+                </div>
+                <div id="SubButtonSevenRes" class="box2" style="overflow: hidden; padding: 0;">
+                  <p><b> <p><b>
+                        Web Designer
+                        <span class="toggle" onclick="toggleSection('toggleSub7Res', 'arrowSub7Res')">
+                            <span id="arrowSub7Res" class="arrow">▼</span>
+                        </span>
+                    </b></p>
+                    <div id="toggleSub7Res" class="hidden">
+                        <ul>
+                            <li><b>Web Designer:</b></li>
+                            <!-- Plain English breakdown of web designer -->
+                            creates and oversees all visual aspects of websites. Web Designers plan, ideate, create, and build websites and web pages, many of which 
+                            combine a number of visual elements including text, photos, graphics, and video clips. 
+                            A Web Designer also oversees the design and layout, which can mean working on a brand new website or updating existing pages.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Core Skills Section -->
+        <div id="ButtonFour" class="box">
+            <h2>
+                Core Skills
+                <span class="toggle" onclick="toggleSection('toggleCoreSkills', 'arrowCoreSkills')">
+                    <span id="arrowCoreSkills" class="arrow">▼</span>
+                </span>
+            </h2>
+            <hr>
+            <div id="toggleCoreSkills" class="hidden">
+                    <p>Below is a short description of multiple core skills needed in being an IT professional.</p>
+                    <div id="SubButtonOneSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Problem-Solving
+                            <span class="toggle" onclick="toggleSection('toggleSub1Skill', 'arrowSub1Skill')">
+                                <span id="arrowSub1Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub1Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                IT professionals encounter challenges ranging from debugging code to resolving network issues. This skill involves analytical thinking and creativity to find effective solutions.   
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                To improve, practice breaking problems into smaller parts and identifying patterns. Engage in puzzles or logical games to enhance critical thinking. 
+                            </ul>
+                        </div>
+                     </div>
+                    <div id="SubButtonTwoSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Programming and Coding
+                            <span class="toggle" onclick="toggleSection('toggleSub2Skill', 'arrowSub2Skill')">
+                                <span id="arrowSub2Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub2Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                Understanding programming languages like Python, Java, or SQL is essential for software development and data management. Writing clean and efficient code is key to building reliable systems.  
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                Start with beginner-friendly tutorials, then work on small projects to practice. Join coding communities to learn from peers and get feedback on your work.  
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="SubButtonThreeSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Networking and Cybersecurity
+                            <span class="toggle" onclick="toggleSection('toggleSub3Skill', 'arrowSub3Skill')">
+                                <span id="arrowSub3Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub3Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                This involves managing networks and ensuring systems are secure from threats. Cybersecurity focuses on protecting data and infrastructure from breaches.  
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                Enroll in courses like CompTIA or Cisco certifications. Stay updated on the latest security trends and practice setting up secure networks in test environments.  
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="SubButtonFourSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Communication
+                            <span class="toggle" onclick="toggleSection('toggleSub4Skill', 'arrowSub4Skill')">
+                                <span id="arrowSub4Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub2=4Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                IT requires explaining complex concepts to non-technical stakeholders. Clear communication ensures projects run smoothly and clients or colleagues understand technical solutions.  
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                Practice simplifying technical terms into everyday language. Join public speaking or teamwork-focused workshops to refine your interpersonal skills.  
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="SubButtonFiveSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Data Analysis and Management
+                            <span class="toggle" onclick="toggleSection('toggleSub5Skill', 'arrowSub5Skill')">
+                                <span id="arrowSub5Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub5Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                IT professionals often work with large datasets, extracting insights and making informed decisions. Knowledge of tools like Excel, Power BI, or databases is crucial.  
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                Experiment with analyzing datasets using free tools or platforms. Take online courses in data analytics to deepen your understanding and application.  
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="SubButtonSixSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Project Management
+                            <span class="toggle" onclick="toggleSection('toggleSub6Skill', 'arrowSub6Skill')">
+                                <span id="arrowSub6Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub6Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                Managing IT projects involves balancing timelines, budgets, and team coordination. Good project managers ensure projects meet goals without exceeding constraints.  
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                Learn project management methodologies like Agile or Scrum. Use tools like Trello or Asana to organize tasks and practice managing small projects.  
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="SubButtonSevenSkill" class="box2" style="overflow: hidden; padding: 0;">
+                        <p><b>
+                            Adaptability
+                            <span class="toggle" onclick="toggleSection('toggleSub7Skill', 'arrowSub7Skill')">
+                                <span id="arrowSub7Skill" class="arrow">▼</span>
+                            </span>
+                        </b></p>
+                        <div id="toggleSub7Skill" class="hidden">
+                            <ul>
+                                <li><b>Description</b></li>
+                                Technology evolves rapidly, so staying flexible and willing to learn is vital. IT professionals must adjust to new tools, frameworks, and challenges regularly.  
+                            </ul>
+                            <ul>
+                                <li><b>Improvement</b></li>
+                                Commit to lifelong learning by following tech blogs, podcasts, or online courses. Experiment with new technologies and take on diverse roles to build resilience.
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+                </div>
+            </div>
+    <!-- Penguin Image Link -->
+    <div id="penguinLink">
+        <a href="https://www.youtube.com/watch?v=SVyjzQbyctk" target="_blank">
+            <img id="penguinImage" src="https://images-platform.99static.com//Gi9chd0leCk6G7eNGgc3isrfXfQ=/0x1200:1201x2401/fit-in/500x500/99designs-contests-attachments/93/93548/attachment_93548386" alt="Click to learn about penguins">
+        </a>
+    </div>
+
+    <script>
+        // Function to toggle sections
+        function toggleSection(sectionId, arrowId) {
+            var content = document.getElementById(sectionId);
+            var arrow = document.getElementById(arrowId);
+
+            // Check if it's hidden
+            if (content.classList.contains("hidden")) {
+                content.style.height = content.scrollHeight + "px"; // Expand it
+                content.style.opacity = "1"; // Make visible
+                content.classList.remove("hidden");
+                content.classList.add("visible");
+                arrow.classList.add("open"); // Rotate the arrow
+
+                // Reset height to 'auto' after animation
+                setTimeout(() => {
+                    content.style.height = "auto";
+                }, 500);
+            } else {
+                content.style.height = content.scrollHeight + "px"; // Set height for collapse animation
+                content.offsetHeight; // Trigger reflow (hack to restart animation)
+                content.style.height = "0"; // Collapse it
+                content.style.opacity = "0"; // Fade out
+                content.classList.remove("visible");
+                content.classList.add("hidden");
+                arrow.classList.remove("open"); // Reset arrow
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
